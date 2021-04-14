@@ -32,4 +32,4 @@ async def ping_bot(_, message):
     end_time = time.time()
     ping_time = round((end_time - start_time) * 1000, 3)
     uptime = get_readable_time((time.time() - StartTime))
-    await m.edit_text(f"**PONG!! 🏓:** `{ping_time}ms`\n**NoPm uptime:** {uptime}", parse_mode='markdown')
+    await m.edit_text(f"**🏓 PONG!!:** `{ping_time} ms`\n**🆙 UPTIME:** `{uptime}`", parse_mode='markdown')
