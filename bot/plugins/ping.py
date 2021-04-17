@@ -25,7 +25,7 @@ def get_readable_time(seconds: int) -> str:
     ping_time += ":".join(time_list)
     return ping_time
 
-@Client.on_message(~filters.me & filters.command('ping', prefixes='/'), group=8)
+@Client.on_message(~filters.me & filters.command('uptime', prefixes='/'), group=8)
 async def ping_bot(_, message):
     start_time = time.time()
     m = await message.reply_text("Pinging...")
@@ -33,3 +33,4 @@ async def ping_bot(_, message):
     ping_time = round((end_time - start_time) * 1000, 3)
     uptime = get_readable_time((time.time() - StartTime))
     await m.edit_text(f"**🏓 PONG!!:** `{ping_time} ms`\n**🆙 UPTIME:** `{uptime}`", parse_mode='markdown')
+    #code credits github.com/F36
