@@ -2,6 +2,10 @@
 
 This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the [COPYING](./COPYING) for more details.
 
+#Deploy
+- To deploy in heroku, Fork the repo, then connect the GitHub account in deploy tab and deploy your fork.
+- Fill the [required env vars](https://www.github.com/adityaprasad502/plutoniumx/tree/master/sample_config.env) for the bot to run!
+
 ## Demo RoBot
 
 - [@pmplutoniumxbot](https://telegram.dog/pmplutoniumxbot)
