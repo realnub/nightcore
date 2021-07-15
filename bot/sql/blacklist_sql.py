@@ -56,8 +56,7 @@ def check_is_black_list(message: Message):
     """ check if user_id is blacklisted """
     if message and message.from_user and message.from_user.id:
         try:
-            s__ = SESSION.query(BlackList).get(str(message.from_user.id))
-            return s__
+            return SESSION.query(BlackList).get(str(message.from_user.id))
         finally:
             SESSION.close()
 
