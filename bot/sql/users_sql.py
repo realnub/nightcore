@@ -100,3 +100,11 @@ def get_chek_mdid(kopp_id: int):
             return all_lst[-1]
     finally:
         SESSION.close()
+
+
+def get_chats():
+    try:
+        All = SESSION.query(Users).filter().all()
+        return list({int(a.chat_id) for a in All})
+    finally:
+        SESSION.close()
