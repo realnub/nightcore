@@ -21,7 +21,7 @@ There is an [ongoing issue](https://github.com/SpEcHiDe/NoPMsBot/issues/4) which
 ###### Support and Thanks to
 
 - </a>
-  <a href="t.me/ZenXender">
+  <a href="https://t.me/ZenXender">
   <img src="https://img.shields.io/badge/ZenXender%20Support-blue?style=flat&logo=telegram">
   </a>  
 </p>
