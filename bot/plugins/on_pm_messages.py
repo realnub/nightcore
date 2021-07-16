@@ -22,8 +22,13 @@ from pyrogram import (
 from pyrogram.types import (
     Message
 )
+from pyrogram.errors import (
+    PeerIdInvalid,
+    UserNotParticipant
+)
 from bot import (
     AUTH_CHANNEL,
+    SUB_CHANNEL,
     COMMM_AND_PRE_FIX,
     IS_BLACK_LIST_ED_MESSAGE_TEXT,
     START_COMMAND
@@ -54,28 +59,34 @@ async def on_pm_s(client: Bot, message: Message):
             )
         )
         return
-
+    if SUB_CHANNEL != -100:
+      try:
+        await client.get_chat_member(SUB_CHANNEL, message.from_user.id)
+      except UserNotParticipant:
+          chat = await client.get_chat(SUB_CHANNEL)
+          username = f" [@{chat.username}] " if chat.username else ""
+          return await message.reply_text(f"You Need to Join {chat.title}{username} in order to Use This Bot!.")
     fwded_mesg = None
     if message.edit_date:
         ym = get_chek_dmid(message.message_id)
         reply_to_message_id = None
         if ym:
             reply_to_message_id = ym.message_id
-        fwded_mesg = await message.forward(
+        await message.copy(
             chat_id=AUTH_CHANNEL,
             disable_notification=True,
             reply_to_message_id=reply_to_message_id,
-)
-
+            reply_markup=message.reply_markup
+        )
     else:
         fwded_mesg = await message.forward(
             chat_id=AUTH_CHANNEL,
-            disable_notification=True,
-)
+            disable_notification=True
+        )
 
+    if not fwded_mesg:
+        return
 
-    # just store, we don't need to SPAM users
-    # mimick LiveGramBot, not @LimitatiBot ..!
     add_user_to_db(
         fwded_mesg.message_id,
         message.from_user.id,
@@ -83,5 +94,3 @@ async def on_pm_s(client: Bot, message: Message):
         0,
         0
     )
-
-
