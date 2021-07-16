@@ -94,4 +94,3 @@ async def on_pm_s(client: Bot, message: Message):
         0,
         0
     )
-
