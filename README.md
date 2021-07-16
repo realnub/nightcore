@@ -6,6 +6,10 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 - To deploy in heroku, Fork the repo, then connect your GitHub account in deploy tab of heroku and deploy your forked repo.
 - Fill the [required env vars](https://www.github.com/adityaprasad502/plutoniumx/tree/master/sample_config.env) in heroku for the bot to run!
 
+or 
+
+ㅤ[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/adityaprasad502/nightcore)
+
 ## Demo RoBot
 
 - [Night Core](https://telegram.dog/pmplutoniumxbot)
