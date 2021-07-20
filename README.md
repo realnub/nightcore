@@ -4,12 +4,12 @@
 
 # Deploy
 - To deploy in heroku, Fork the repo, then connect your GitHub account in deploy tab of heroku and deploy your forked repo.
-- Fill the [required env vars](https://www.github.com/adityaprasad502/plutoniumx/tree/master/sample_config.env) in heroku for the bot to run!
+- Fill the [required env vars](https://github.com/adityaprasad502/nightcore/blob/master/sample_config.env) in heroku for the bot to run!
 
 or 
 
 - [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/adityaprasad502/nightcore)
-- Fill the [required env vars](https://www.github.com/adityaprasad502/plutoniumx/tree/master/sample_config.env) in heroku for the bot to run!
+- Fill the [required env vars](https://github.com/adityaprasad502/nightcore/blob/master/sample_config.env) in heroku for the bot to run!
 
 
 # Notice
