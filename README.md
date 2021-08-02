@@ -20,6 +20,6 @@ There is an [ongoing issue](https://github.com/SpEcHiDe/NoPMsBot/issues/4) which
   <a href="https://t.me/ZenXender">
   <img src="https://img.shields.io/badge/ZenXender%20Support-blue?style=flat&logo=telegram">
   </a>  
+- <a href="https://git.io/adityaprasad502"><img src="https://da.gd/count"/></a>
+- [Dan Tès](https://telegram.dog/haskell) for his [Pyrogram Library](https://github.com/pyrogram/pyrogram)
 </p>
-
-* [Dan Tès](https://telegram.dog/haskell) for his [Pyrogram Library](https://github.com/pyrogram/pyrogram)
