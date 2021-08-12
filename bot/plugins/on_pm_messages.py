@@ -69,9 +69,7 @@ async def on_pm_s(client: Bot, message: Message):
     fwded_mesg = None
     if message.edit_date:
         ym = get_chek_dmid(message.message_id)
-        reply_to_message_id = None
-        if ym:
-            reply_to_message_id = ym.message_id
+        reply_to_message_id = ym.message_id if ym else None
         await message.forward(
             chat_id=AUTH_CHANNEL,
             disable_notification=True,
